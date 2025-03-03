@@ -2,10 +2,10 @@ import streamlit as st
 import requests
 from bs4 import BeautifulSoup
 
-@st.cache_data(show_spinner=False)
+@st.cache_data(ttl=60, show_spinner=False)
 def obtener_html(url):
     """
-    Obtiene el contenido HTML de una URL.
+    Obtiene el contenido HTML de una URL con un tiempo de vida de caché de 60 segundos.
 
     Args:
         url (str): La URL de la página web a descargar.
@@ -43,13 +43,13 @@ def extraer_titulos_noticias(html):
 
     # Buscar títulos en etiquetas h1, h2, h3
     for titulo in soup.find_all(["h1", "h2", "h3"]):
-        texto = titulo.text.strip()
+        texto = titulo.get_text(strip=True)
         if texto and len(texto) > 16:
             titulos.append(texto)
 
     # Buscar títulos en clases específicas comunes en medios
     for elemento in soup.select(".title, .headline, .article-title, .news-title"):
-        texto = elemento.text.strip()
+        texto = elemento.get_text(strip=True)
         if texto and texto not in titulos:
             titulos.append(texto)
 
@@ -71,7 +71,7 @@ medios = {
 
 def main():
     st.title("Scraping de Títulos de Noticias")
-    st.write("Este es un ejemplo de scraping de títulos de noticias de varios medios.")
+    st.write("Este es un ejemplo de scraping de títulos de noticias de varios medios. La caché se actualiza cada 60 segundos.")
     
     for nombre, url in medios.items():
         st.header(f"{nombre} - {url}")
