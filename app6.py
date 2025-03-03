@@ -83,7 +83,7 @@ def main():
         if titulos:
             st.subheader("Títulos de noticias:")
             for titulo in titulos:
-                st.write(f"- {titulo}")
+                st.write(f"- Fuente: {nombre} | {titulo}")
         else:
             st.write("No se encontraron títulos de noticias.")
 
