@@ -79,7 +79,7 @@ def main():
             if "dobleamarilla" in url:
                 titulos = titulos[:20]
             if "ole.com" in url:
-                titulos = titulos[:30]
+                titulos = titulos[:40]
             if "tycsports" in url:
                 titulos = titulos[:20]                          
         if titulos:
