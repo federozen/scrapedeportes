@@ -62,7 +62,7 @@ medios = {
     "Espn": "https://www.espn.com.ar/",
     "Clarin": "https://www.clarin.com/",
     "La Nacion": "https://www.lanacion.com.ar/",    
-    "Infobae": "https://www.infobae.com.ar/",
+    "Infobae": "https://www.infobae.com/",
     "TN": "https://tn.com.ar/",
     "Perfil": "https://www.perfil.com/",    
     "Cronista": "https://www.cronista.com/",
