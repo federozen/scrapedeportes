@@ -67,8 +67,6 @@ medios = {
     "Perfil": "https://www.perfil.com/",    
     "Cronista": "https://www.cronista.com/",
     "Ambito": "https://www.ambito.com/",
-
-    
 }
 
 def main():
@@ -80,13 +78,8 @@ def main():
         with st.spinner(f"Scrapeando {nombre}..."):
             html = obtener_html(url)
             titulos = extraer_titulos_noticias(html)
-            # Limitar a 20 títulos si se trata de dobleamarilla.com
-            if "dobleamarilla" in url:
-                titulos = titulos[:20]
-            if "ole.com" in url:
-                titulos = titulos[:40]
-            if "tycsports" in url:
-                titulos = titulos[:20]                          
+            # Limitar a 30 titulares para cada medio
+            titulos = titulos[:30]
         if titulos:
             st.subheader("Títulos de noticias:")
             for titulo in titulos:
