@@ -57,13 +57,13 @@ def extraer_titulos_noticias(html):
 
 # Diccionario con medios de comunicación y sus respectivas URL
 medios = {
-    "Ole": "https://www.ole.com.ar",
-    "Clarin": "https://www.clarin.com/deportes",    
-    "TyC": "https://www.tycsports.com/",
-    "dobleamarilla": "https://www.dobleamarilla.com.ar",
+    "Ole": "https://www.ole.com.ar/ultimas-noticias",
+    "Clarin deportes": "https://www.clarin.com/deportes",
     "Espn": "https://www.espn.com.ar/",
-    "Infobae": "https://www.infobae.com/deportes/",
-    "TN": "https://tn.com.ar/deportes/"
+    "Clarin": "https://www.clarin.com/",
+    "La Nacion": "https://www.lanacion.com.ar/",    
+    "Infobae": "https://www.infobae.com/",
+    "TN": "https://tn.com.ar/"
 }
 
 def main():
