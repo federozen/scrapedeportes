@@ -78,7 +78,7 @@ def main():
             # Limitar a 20 títulos si se trata de dobleamarilla.com
             if "dobleamarilla" in url:
                 titulos = titulos[:20]
-            if "Ole.com" in url:
+            if "ole.com" in url:
                 titulos = titulos[:30]
             if "tycsports" in url:
                 titulos = titulos[:20]                          
